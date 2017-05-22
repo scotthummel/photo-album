@@ -1,0 +1,18 @@
+<a href="/add" class="btn btn-primary">Add Photo</a>
+
+    <div ng-repeat="photo in vm.photos">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>{{ photo.title }}</h3>
+
+                <a href="#" class="btn btn-xs btn-default pull-right" ng-click="vm.deletePhoto(photo._id)">Delete Photo</a>
+                <a href="/edit/{{ photo._id}}" class="btn btn-xs btn-default pull-right">Edit Photo</a>
+
+                <img class="img-responsive" ng-src="{{ photo.url }}" alt="photo.title"  />
+
+                <p>
+                    {{ photo.description }}
+                </p>
+            </div>
+        </div>
+    </div>

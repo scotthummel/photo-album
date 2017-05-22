@@ -1,0 +1,14 @@
+<div ng-if="vm.photo.url" class="photo">
+    <img class="img-thumbnail" ng-src="{{vm.photo.url}}" alt="{{ vm.photo.filename }}"/>
+</div>
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" ng-model="vm.photo.title" required/>
+</div>
+<div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" ng-model="vm.photo.description" rows="7" required></textarea>
+</div>
+
+<button class="btn btn-primary" ng-click="vm.upload()">Upload</button>
+<button class="btn btn-primary" ng-click="vm.save(vm.file)">Save</button>
